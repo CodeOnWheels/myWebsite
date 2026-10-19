@@ -1,0 +1,40 @@
+/* Traditional Chinese translations are maintained in translations.json. */
+'use strict';
+(() => {
+ const translations = {"Skip to content": "跳至主要內容", "Work": "作品", "Photography": "攝影", "Journal": "札記", "About": "關於我", "Let’s connect": "聯絡我", "BASED IN BOISE, IDAHO": "現居愛達荷州波伊西", "STUDENT / BUILDER / OBSERVER": "學生 / 創作者 / 觀察者", "I write code, build robots,": "我寫程式、打造機器人，", "and see the world through a lens.": "也透過鏡頭觀察世界。", "Computer Science @ Boise State University": "電腦科學 @ Boise State University", "Cybersecurity emphasis · Chinese Studies minor": "專注網路安全 · 輔修中文研究", "COMPUTER SCIENCE": "電腦科學", "ROBOTICS": "機器人", "PHOTOGRAPHY": "攝影", "ALWAYS CURIOUS": "保持好奇", "01 / BUILDING THINGS": "01 / 動手創作", "Code meets": "讓程式走進", "the real world.": "真實世界。", "From autonomous robots to hands-on STEM education. I like figuring out how things work—and helping others do the same.": "從自主機器人到實作 STEM 教育，我喜歡弄懂事物如何運作，也喜歡幫助別人一起探索。", "SYSTEM STUDY / ROBOT LOCALIZATION": "系統示意 / 機器人定位", "Schematic illustration of AprilTag robot localization": "運用 AprilTag 進行機器人定位的示意圖", "START → AUTONOMOUS PATH": "起點 → 自主行進路徑", "ILLUSTRATIVE DIAGRAM ↗": "示意圖 ↗", "SELECTED PROJECT · 2021—2024": "精選專案 · 2021—2024", "Team #2594": "第 2594 隊", "Software that moves more than pixels.": "讓程式驅動真實世界。", "Led an eight-person programming subteam building autonomous and teleoperated robot control systems. Used Limelight vision and AprilTags for real-time localization, odometry, and autonomous pathfinding.": "帶領八人的程式設計小組，開發自主與遙控機器人控制系統。運用 Limelight 視覺系統與 AprilTag，實現即時定位、里程計估測與自主路徑規劃。", "Computer vision": "電腦視覺", "More about my role": "進一步了解我的角色", "I helped streamline development through GitHub and Agile collaboration, and mentored new programmers in Java, robotics frameworks, and troubleshooting.": "透過 GitHub 與敏捷協作改善開發流程，並指導新成員學習 Java、機器人框架與問題排除。", "02 / LOOKING CLOSER": "02 / 細看世界", "A different": "換個角度，", "kind of focus.": "看見細節。", "Photography gives me a reason to slow down, notice the details, and keep looking.": "攝影讓我放慢腳步，留意細節，持續探索眼前的世界。", "FRAME / 001": "影像 / 001", "FRAME / 002": "影像 / 002", "FRAME / 003": "影像 / 003", "View original post ↗": "查看 Instagram 原始貼文 ↗", "03 / LEARNING BY DOING": "03 / 從實作中學習", "Experience.": "經歷。", "Download resume": "下載履歷（英文）", "AUG 2026—PRESENT": "2026 年 8 月—至今", "Chip Ambassador": "晶片大使", "Microelectronics Education and Research Center": "微電子教育與研究中心", "Connecting students with semiconductor careers and research through accessible technical presentations, workshops, and campus events.": "透過淺顯易懂的技術分享、工作坊與校園活動，協助學生認識半導體職涯與研究機會。", "FEB—AUG 2026": "2026 年 2 月—8 月", "STEM Coach": "STEM 指導老師", "Helped students ages 5–12 explore physics, CAD, 3D printing, drones, and robotics through hands-on engineering challenges.": "透過動手實作的工程挑戰，帶領 5 至 12 歲的學生探索物理、CAD、3D 列印、無人機與機器人。", "AUG 2025—MAY 2026": "2025 年 8 月—2026 年 5 月", "Resident Assistant": "宿舍助理", "Boise State University Housing and Residence Life": "Boise State University 住宿與宿舍生活部門", "Supported a residential community of more than 70 students, organized community events, and helped residents navigate challenges.": "支持超過 70 位學生的住宿社群，規劃社群活動，並協助住宿生面對生活中的挑戰。", "04 / NOTES ALONG THE WAY": "04 / 沿途筆記", "Field notes.": "探索札記。", "A place for things I’m building, places I’ve been, and ideas worth keeping.": "記錄正在做的事、走過的地方，以及值得留下的想法。", "The notebook is open.": "筆記本已翻開。", "No posts published yet. Future notes on code, robotics, photography, and life beyond the classroom will live here.": "目前尚未發布文章。未來會在這裡分享程式設計、機器人、攝影，以及課堂之外的生活。", "MORE TO COME": "敬請期待", "05 / THE PERSON BEHIND THE PROJECTS": "05 / 作品背後的我", "Curiosity": "帶著好奇心，", "travels well.": "走向世界。", "BOISE": "波伊西", "TAIWAN": "臺灣", "FRANCE": "法國", "HAVE A PROJECT, AN IDEA, OR A GOOD STORY?": "有專案、想法，或好故事想分享嗎？", "Let’s talk.": "聊聊吧。", "OPEN TO CONVERSATION.": "歡迎交流。", "Back to top ↑": "回到頂端 ↑", "Giovanni Cascio home": "Giovanni Cascio 高景浩首頁", "Main navigation": "主要導覽", "Page language": "頁面語言", "Explore my work": "探索我的作品", "Interests": "興趣", "Illustration of robot localization using AprilTags": "運用 AprilTag 進行機器人定位的示意圖", "Open Instagram post one": "開啟第一則 Instagram 貼文", "Open Instagram post two": "開啟第二則 Instagram 貼文", "Open Instagram post three": "開啟第三則 Instagram 貼文", "Photography by Giovanni — Instagram post one": "高景浩的攝影作品 — 第一則 Instagram 貼文", "Photography by Giovanni — Instagram post two": "高景浩的攝影作品 — 第二則 Instagram 貼文", "Photography by Giovanni — Instagram post three": "高景浩的攝影作品 — 第三則 Instagram 貼文"};
+ const buttons = [...document.querySelectorAll('[data-language]')];
+ const textEntries = [];
+ const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+ let node;
+ while ((node = walker.nextNode())) {
+  if (node.parentElement.closest('script, style, #bio-en, #bio-zh, [data-language], .chinese-name')) continue;
+  const key = node.nodeValue.trim();
+  if (Object.hasOwn(translations, key)) textEntries.push({node, original: node.nodeValue, key});
+ }
+ const attributes = [];
+ for (const element of document.querySelectorAll('[aria-label], iframe[title]')) {
+  for (const name of ['aria-label', 'title']) {
+   const original = element.getAttribute(name);
+   if (original && Object.hasOwn(translations, original)) attributes.push({element, name, original});
+  }
+ }
+ const englishTitle = document.title;
+ const description = document.querySelector('meta[name="description"]');
+ const englishDescription = description.content;
+ function select(language, persist) {
+  if (!['en', 'zh-Hant'].includes(language)) return;
+  const chinese = language === 'zh-Hant';
+  document.documentElement.lang = language;
+  for (const entry of textEntries) entry.node.nodeValue = chinese ? entry.original.replace(entry.key, translations[entry.key]) : entry.original;
+  for (const entry of attributes) entry.element.setAttribute(entry.name, chinese ? translations[entry.original] : entry.original);
+  document.getElementById('bio-en').hidden = chinese;
+  document.getElementById('bio-zh').hidden = !chinese;
+  document.querySelector('.chinese-name').hidden = !chinese;
+  for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.language === language));
+  document.title = chinese ? '高景浩 Giovanni Cascio — 程式、攝影與好奇心' : englishTitle;
+  description.content = chinese ? '高景浩 Giovanni Cascio — Boise State University 電腦科學學生、機器人程式設計者與攝影愛好者。探索作品、攝影、經歷與札記。' : englishDescription;
+  if (persist) {try {localStorage.setItem('giovanni-bio-language', language);} catch {}}
+ }
+ for (const button of buttons) button.addEventListener('click', () => select(button.dataset.language, true));
+ try {select(localStorage.getItem('giovanni-bio-language'), false);} catch {}
+})();
