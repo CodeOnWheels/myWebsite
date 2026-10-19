@@ -1,0 +1,27 @@
+Portfolio ideas for later — Giovanni Cascio / 高景浩
+
+1. A “Now” section
+   Briefly share what you’re learning, building, or photographing this semester.
+   Keep it short and easy to update.
+
+2. Photo essays
+   Create small collections from Taiwan or France, with captions explaining
+   what caught your attention. Start with a Taiwan photo essay.
+   Gather original image files for a larger, photo-only gallery with optional
+   captions and links to the original Instagram posts.
+
+3. First journal post
+   Write about your Mandarin immersion experience at Providence University.
+   Connect language learning, travel, and photography using your own stories.
+
+4. Robotics case study
+   Once materials are ready, add real robot photos, a demo video, your role,
+   and one technical problem you solved. The AprilTag localization work could
+   be a useful focus.
+
+5. Internship availability
+   If you’re seeking internships, add a short line specifying the roles and
+   dates you’re targeting. Confirm those details before publishing.
+
+Suggested next addition: a Taiwan photo essay.
+These are future ideas, not changes scheduled for implementation.
