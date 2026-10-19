@@ -4,10 +4,11 @@ A responsive, static portfolio. Deployable output is `dist/`. No runtime depende
 
 ## Write and publish a blog post
 
-1. Open `/write.html` using the footer’s **Write** link.
-2. Write a title, date, category, excerpt, and body. The page saves a device-local draft and exports a Markdown file. It does **not** publish directly or sync drafts across devices.
-3. Add the exported `.md` file to `content/posts/`, using a unique lowercase hyphenated filename. Set `draft: false` when ready.
-4. Run `python scripts/build-blog.py` from this directory, then deploy the updated site through Sites. Alternatively, attach the exported file in the portfolio chat and ask to publish it.
+1. Write an article in your preferred editor and save it as Markdown.
+2. Add the `.md` file to `content/posts/`, using a unique lowercase hyphenated filename and the metadata below. Set `draft: false` when ready.
+3. Run `python scripts/build-blog.py` from this directory, then deploy through Sites. Alternatively, attach your article in the portfolio chat and ask to publish it.
+
+There is no on-site writing or publishing interface. Visitors can only read published articles.
 
 Supported body formatting: paragraphs, `## headings`, `- lists`, and fenced code blocks. Raw HTML is escaped. This intentionally small format keeps posts safe and dependency-free.
 
@@ -34,7 +35,6 @@ Resume content is sourced from the supplied Giovanni_Cascio_Resume_2026.pdf. The
 ## Checks
 
 - `python scripts/build-blog.py`
-- `node --check dist/assets/editor.js`
 - Verify local links and anchor targets.
 
 Hosting identity is retained in `.openai/hosting.json`. New Sites are owner-private until their audience is explicitly changed.
