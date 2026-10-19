@@ -38,3 +38,28 @@ Resume content is sourced from the supplied Giovanni_Cascio_Resume_2026.pdf. The
 - Verify local links and anchor targets.
 
 Hosting identity is retained in `.openai/hosting.json`. New Sites are owner-private until their audience is explicitly changed.
+
+## GitHub Pages
+
+The workflow in `.github/workflows/pages.yml` builds the blog and publishes a
+Pages-specific copy of `dist/` on every push to `main`. The original `dist/`
+keeps its root-relative paths for Sites hosting. `scripts/prepare-pages.py`
+rebases links in the copied `_site/` output using the Pages base path, including
+stylesheets, JavaScript, the resume download, and nested journal links.
+
+One-time setup: open repository **Settings → Pages → Build and deployment**,
+and set **Source** to **GitHub Actions**. Then open **Actions → Deploy portfolio
+to GitHub Pages → Run workflow** if the latest push has already run.
+
+Expected URL: https://codeonwheels.github.io/myWebsite/
+
+Local build check:
+
+```sh
+python scripts/build-blog.py
+python scripts/prepare-pages.py --base-path /myWebsite
+```
+
+Push source changes to `main` to update GitHub Pages automatically. The
+published PDF is the original English resume, and Instagram embeds remain
+hosted by Instagram.
