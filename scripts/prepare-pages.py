@@ -19,9 +19,9 @@ def prepare(base_path):
     # Keep external, fragment-only, and protocol-relative URLs unchanged.
     pattern = re.compile(r'(?P<attr>\b(?:href|src|action)\s*=\s*)(?P<quote>[\x22\x27])/(?P<path>(?!/)[^\x22\x27]*)(?P=quote)')
     for page in output.rglob('*.html'):
-        content = page.read_text()
+        content = page.read_text(encoding="utf-8")
         content = pattern.sub(lambda m: m['attr'] + m['quote'] + base + '/' + m['path'] + m['quote'], content)
-        page.write_text(content)
+        page.write_text(content, encoding="utf-8")
     (output / '.nojekyll').touch()
     print(f'Prepared GitHub Pages output at {output} with base path {base or "/"}')
 
@@ -30,3 +30,4 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base-path', default='/myWebsite')
     prepare(parser.parse_args().base_path)
+

@@ -2,11 +2,37 @@
 
 A responsive, static portfolio. Deployable output is `dist/`. No runtime dependencies or tracking scripts. Instagram posts load directly from Instagram; visibility depends on Instagram embedding permissions and the visitor’s browser. Original links are always available.
 
+## Overview
+
+A personal portfolio built with HTML, CSS, JavaScript, and Python. Features include English/Traditional Chinese language switching, a downloadable resume, and a static journal generated from Markdown.
+
+## Run locally
+
+Requires Python 3; no third-party packages are needed.
+
+```sh
+git clone https://github.com/CodeOnWheels/myWebsite.git
+cd myWebsite
+python scripts/build-blog.py
+python -m http.server 8000 --directory dist
+```
+
+Open http://localhost:8000.
+
+## Project structure
+
+- `dist/index.html` — portfolio content and entry page.
+- `dist/assets/` — styling, language switching, translations, and resume.
+- `content/posts/` — optional journal source; create it when adding a post.
+- `scripts/build-blog.py` — Markdown-to-HTML journal generator.
+- `scripts/prepare-pages.py` — separate build output for a GitHub Pages project path.
+- `.github/workflows/pages.yml` — deployment workflow.
+
 ## Write and publish a blog post
 
 1. Write an article in your preferred editor and save it as Markdown.
 2. Add the `.md` file to `content/posts/`, using a unique lowercase hyphenated filename and the metadata below. Set `draft: false` when ready.
-3. Run `python scripts/build-blog.py` from this directory, then deploy through Sites. Alternatively, attach your article in the portfolio chat and ask to publish it.
+3. Run `python scripts/build-blog.py` from this directory. Preview the result locally, then deploy the site.
 
 There is no on-site writing or publishing interface. Visitors can only read published articles.
 
@@ -30,14 +56,12 @@ The journal stays empty until a real post is published. Generated article pages 
 
 ## Content
 
-Resume content is sourced from the supplied Giovanni_Cascio_Resume_2026.pdf. The downloadable original is in `dist/assets/`. The robot diagram is illustrative, not a photograph of the competition robot. No travel or photography captions are inferred from the Instagram posts.
+The resume is in `dist/assets/Giovanni_Cascio_Resume_2026.pdf`. The robotics section uses an illustrative system diagram.
 
 ## Checks
 
 - `python scripts/build-blog.py`
 - Verify local links and anchor targets.
-
-Hosting identity is retained in `.openai/hosting.json`. New Sites are owner-private until their audience is explicitly changed.
 
 ## GitHub Pages
 
@@ -63,3 +87,10 @@ python scripts/prepare-pages.py --base-path /myWebsite
 Push source changes to `main` to update GitHub Pages automatically. The
 published PDF is the original English resume, and Instagram embeds remain
 hosted by Instagram.
+
+## Troubleshooting Pages deployment
+
+The repository uses a custom Actions workflow to publish `_site/`. In Settings → Pages, choose **GitHub Actions** as the build source. A branch-based Jekyll build targeting `/docs` will fail because this repository does not contain that directory.
+
+If Configure Pages reports “Not Found,” check that Pages is enabled for this repository and configured for GitHub Actions. Then rerun the existing deployment workflow. Successful local generation alone does not confirm successful publishing.
+
