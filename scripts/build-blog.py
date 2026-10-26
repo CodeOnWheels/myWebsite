@@ -41,7 +41,7 @@ def render(body):
 def build():
     posts = []
     for source in (ROOT / 'content/posts').glob('*.md'):
-        text = source.read_text()
+        text = source.read_text(encoding="utf-8")
         if not text.startswith('---\n'): raise ValueError(f'{source}: missing metadata')
         _, raw, body = text.split('---', 2)
         meta = dict(line.split(':', 1) for line in raw.strip().splitlines() if ':' in line)
@@ -62,16 +62,17 @@ def build():
         safe_title, safe_category = escape(title), escape(category)
         label = published.strftime('%b %d, %Y').upper()
         page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{safe_title} — Giovanni Cascio</title><meta name="description" content="{escape(excerpt, quote=True)}"><link rel="stylesheet" href="/assets/style.css"></head><body><header class="nav"><a class="wordmark" href="/">GC<span class="dot">✳</span></a><a href="/#journal">← All field notes</a></header><main class="article"><span class="eyebrow">{safe_category} / <time datetime="{published.isoformat()}">{label}</time></span><h1>{safe_title}</h1><div>{body}</div><p><a href="/#journal">← Back to the journal</a></p></main></body></html>'''
-        (outdir / f'{slug}.html').write_text(page)
+        (outdir / f'{slug}.html').write_text(page, encoding="utf-8")
         rows.append(f'<a class="post-row" href="/journal/{slug}.html"><span class="eyebrow">{label}<br>{safe_category}</span><div><h3>{safe_title}</h3><p>{escape(excerpt)}</p></div><span class="arrow" aria-hidden="true">↗</span></a>')
     index = DIST / 'index.html'
-    text = index.read_text()
+    text = index.read_text(encoding="utf-8")
     if rows:
         replacement='\n'.join(rows)
     else:
         replacement='<div class="empty-journal"><span class="journal-symbol" aria-hidden="true">↳</span><div><h3>The notebook is open.</h3><p>No posts published yet. Future notes on code, robotics, photography, and life beyond the classroom will live here.</p></div><span class="eyebrow">MORE TO COME</span></div>'
     text = re.sub(r'<!-- BLOG_START -->.*?<!-- BLOG_END -->', '<!-- BLOG_START -->'+replacement+'<!-- BLOG_END -->', text, flags=re.S)
-    index.write_text(text)
+    index.write_text(text, encoding="utf-8")
     print(f'Built {len(posts)} published article(s).')
 
 if __name__ == '__main__': build()
+
